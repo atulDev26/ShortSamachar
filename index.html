@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.21.0/tabler-icons.min.css"
+      integrity="sha512-XrgoTBs7P5YtpkeKqKOKkruURsawIaRrhe8QrcWeMnFeyRZiOcRNjBAX+AQeXOvx9/9fSY32dVct1PccRoCICQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              bgColor: "#0E3F55",
+              downloadBtn: "#2FB0EB",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Short Samachar</title>
+  </head>
+  <body class="bg-gray-100 font-sans leading-relaxed tracking-wide">
+    <header
+      class="bg-bgColor text-white py-4 shadow-2xl rounded-bl-[25px] rounded-br-[25px]"
+    >
+      <div class="container mx-auto flex justify-between items-center px-6">
+        <nav class="w-full">
+          <div class="flex flex-wrap items-center justify-between mx-auto p-1">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="./assets/logo.webp" alt="logo" />
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button
+              id="menu-toggle"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+              <ul
+                class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+              >
+                <!-- Home Link -->
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-3 hover:text-blue-400"
+                    aria-current="page"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-3 hover:text-blue-400"
+                    >Language</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-3 hover:text-blue-400"
+                    >Features</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-3 hover:text-blue-400"
+                    >Partners</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-3 hover:text-blue-400"
+                    >Advertise with us</a
+                  >
+                </li>
+                <li>
+                  <button
+                    class="block py-2 px-3 bg-downloadBtn text-center rounded-3xl hover:bg-[#3281a5]"
+                  >
+                    Download App
+                    <i class="ti ti-download" style="font-size: 20px"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main stripped-gradient w-full p-[40px] lg:p-[80px]">
+      <div
+        class="flex flex-col md:flex-row justify-center items-center md:gap-[300px]"
+      >
+        <div class="order-2 md:order-1">
+          <img
+            src="./assets/mobilepr.webp"
+            alt="Mobile Preview"
+            class="w-[280px]"
+          />
+        </div>
+
+        <div class="order-1 md:order-2">
+          <div class="flex justify-center items-center gap-20">
+            <div class="flex items-center gap-2">
+              <img
+                src="./assets/book.webp"
+                alt="Mobile Preview"
+                class="w-[54px] h-[74] lg:w-[74px] lg:h-[74px]"
+              />
+              <p class="text-2xl text-gray-900 font-semibold">Read</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img
+                src="./assets/listen.webp"
+                alt="Mobile Preview"
+                class="w-[54px] h-[74] lg:w-[74px] lg:h-[74px]"
+              />
+              <p class="text-2xl text-gray-900 font-semibold">Listen</p>
+            </div>
+          </div>
+          <div class="mt-5 text-center">
+            <p
+              class="text-2xl w-full text-center text-gray-900 mt-3 leading-9 roboto-regular"
+            >
+              Short news of your choice &
+            </p>
+            <p
+              class="text-2xl text-center text-gray-900 mb-8 leading-9 roboto-regular"
+            >
+              stay informed about everything.
+            </p>
+            <div class="flex gap-6 mb-10">
+              <a class="shadow-2xl shadow-white"
+                ><img
+                  src="./assets/appstore.webp"
+                  alt="app-store"
+                  class="w-[220px]"
+              /></a>
+              <a class="shadow-2xl shadow-white"
+                ><img
+                  src="./assets/playstore.webp"
+                  alt="play-store"
+                  class="w-[220px]"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section
+      class="stripped-gradient-section w-full p-[30px] bg-[#0E3F55] rounded-3xl"
+    >
+      <div class="text-center">
+        <p
+          class="text-2xl lg:text-4xl font-bold text-white leading-[3.5rem] roboto-regular"
+        >
+          Stay up-to-date with news around the world,
+        </p>
+        <p
+          class="text-2xl lg:text-4xl font-bold text-white leading-relaxed roboto-regular"
+        >
+          in your favorite language.
+        </p>
+      </div>
+      <div
+        id="centered-carousel"
+        class="relative flex justify-center items-center gap-8"
+      >
+        <!-- Carousel Items -->
+        <div
+          class="carousel-item transform transition-all duration-700 ease-in-out scale-90 -translate-x-full opacity-50"
+          data-carousel-item="0"
+        >
+          <img
+            src="/assets/bangla-mob.webp"
+            class="w-32 md:w-40 lg:w-52 rounded-lg shadow-lg"
+            alt="Bangla Preview"
+          />
+        </div>
+        <div
+          class="carousel-item transform transition-all duration-700 ease-in-out scale-110 translate-x-0 opacity-100"
+          data-carousel-item="1"
+        >
+          <img
+            src="/assets/eng-mob.webp"
+            class="w-36 md:w-44 lg:w-56 rounded-lg "
+            alt="English Preview"
+          />
+        </div>
+        <div
+          class="carousel-item transform transition-all duration-700 ease-in-out scale-90 translate-x-full opacity-50"
+          data-carousel-item="2"
+        >
+          <img
+            src="/assets/hindi-mob.webp"
+            class="w-32 md:w-40 lg:w-52 rounded-lg shadow-lg"
+            alt="Hindi Preview"
+          />
+        </div>
+      </div>
+
+      <!-- Navigation Dots -->
+      <div class="flex justify-center mt-4 space-x-2">
+        <span
+          class="carousel-dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
+          data-carousel-dot="0"
+        ></span>
+        <span
+          class="carousel-dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
+          data-carousel-dot="1"
+        ></span>
+        <span
+          class="carousel-dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
+          data-carousel-dot="2"
+        ></span>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
